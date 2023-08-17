@@ -32,7 +32,7 @@ jobs:
 
     steps:
     - name: ✅ Azure Login
-      uses: azure/login@v2
+      uses: azure/login@v1
       with:
         creds: '{"clientId":"${{ secrets.CLIENT_ID }}","clientSecret":"${{ secrets.CLIENT_SECRET }}","subscriptionId":"${{ secrets.SUBSCRIPTION_ID }}","tenantId":"${{ secrets.TENANT_ID }}"}'
             
@@ -64,7 +64,7 @@ jobs:
 
     steps:
     - name: ✅ Azure Login
-      uses: azure/login@v2
+      uses: azure/login@v1
       with:
         creds: '{"clientId":"${{ secrets.CLIENT_ID }}","clientSecret":"${{ secrets.CLIENT_SECRET }}","subscriptionId":"${{ secrets.SUBSCRIPTION_ID }}","tenantId":"${{ secrets.TENANT_ID }}"}'
             
@@ -74,3 +74,4 @@ jobs:
         azcliversion: 2.30.0
         inlineScript: | 
           az group delete -n ${{ vars.AZ_ACI_DNS_PREFIX }}-rg -y
+  
