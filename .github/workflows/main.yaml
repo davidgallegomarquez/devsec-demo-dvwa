@@ -51,12 +51,12 @@ jobs:
     steps:
     - name: ✅ Checkout
       uses: actions/checkout@v2
-
+      
     - name: ✅ DAST
-      run: | 
+      run: |
         env | grep -E "GITHUB_ACTIONS|GITHUB_RUN_NUMBER|GITHUB_REF_NAME|GITHUB_SHA" > /tmp/env
         docker pull registry.fortidevsec.forticloud.com/fdevsec_dast:latest
-        docker run --rm --env-file /tmp/env --mount type=bind,source=$PWD,target=/scan registry.fortidevsec.forticloud.com/fdevsec_dast:latest
+        docker run --rm --env-file /tmp/env --mount type=bind,source=$PWD,target=/scan registry.fortidevsec.forticloud.com/fdevsec_dast:latest      
 
   clean-up-az:
     runs-on: ubuntu-latest
@@ -64,7 +64,7 @@ jobs:
 
     steps:
     - name: ✅ Azure Login
-      uses: azure/login@v1
+      uses: azure/login@v2
       with:
         creds: '{"clientId":"${{ secrets.CLIENT_ID }}","clientSecret":"${{ secrets.CLIENT_SECRET }}","subscriptionId":"${{ secrets.SUBSCRIPTION_ID }}","tenantId":"${{ secrets.TENANT_ID }}"}'
             
@@ -74,4 +74,3 @@ jobs:
         azcliversion: 2.30.0
         inlineScript: | 
           az group delete -n ${{ vars.AZ_ACI_DNS_PREFIX }}-rg -y
-  
