@@ -1,0 +1,23 @@
+#
+# Just to release azure resources in case of fail.
+# 
+
+name: 🗑️🗑️🗑️ Clean Az Subscription 
+on: workflow_dispatch
+
+jobs:
+  clean-up-az:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: ✅ Azure Login
+      uses: azure/login@v1
+      with:
+        creds: '{"clientId":"${{ secrets.CLIENT_ID }}","clientSecret":"${{ secrets.CLIENT_SECRET }}","subscriptionId":"${{ secrets.SUBSCRIPTION_ID }}","tenantId":"${{ secrets.TENANT_ID }}"}'
+            
+    - name: ✅ Clean Up Azure Container Instances App
+      uses: Azure/cli@v1.0.7
+      with:
+        azcliversion: 2.30.0
+        inlineScript: | 
+          az group delete -n ${{ vars.AZ_ACI_DNS_PREFIX }}-rg -y
