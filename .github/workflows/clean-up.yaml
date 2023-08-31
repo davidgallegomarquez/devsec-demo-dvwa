@@ -1,7 +1,6 @@
 #
 # Just to release azure resources in case of fail.
 # 
-
 name: 🗑️🗑️🗑️ Clean Az Subscription 
 on: workflow_dispatch
 
