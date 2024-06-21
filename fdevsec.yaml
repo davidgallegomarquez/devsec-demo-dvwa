@@ -17,7 +17,7 @@ languages:
   - javascript
      
 dast:
-  url: http://5d83335f-5157-4e5a-b77a-9f19774468e6.eastus.azurecontainer.io/login.php
+  url: http://761b8ca0-97b5-407b-af06-976461369267.eastus.azurecontainer.io/login.php
   full_scan: true #true|false
 
 resource:
