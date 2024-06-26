@@ -1,7 +1,7 @@
 name: 🚀🚀 Basic 👨‍💻Dev - Sec🪲 Ops📉  Workflow 🚀🚀  
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "main", "devsec-demo-dvwa-sinvuln" ]
   pull_request:
     branches: [ "main" ]
 
