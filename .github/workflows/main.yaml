@@ -42,6 +42,7 @@ jobs:
         azcliversion: 2.30.0
         inlineScript: | 
           az group create -n ${{ vars.AZ_ACI_DNS_PREFIX }}-rg -l eastus
+          az acr login --name bdeacr.azurecr.io --username bdeacr
           az container create --name ${{ vars.AZ_ACI_DNS_PREFIX }} --dns-name-label ${{ vars.AZ_ACI_DNS_PREFIX }} --image ${{ vars.DOCKER_IMAGE }}  -g ${{ vars.AZ_ACI_DNS_PREFIX }}-rg
     
   dast:
