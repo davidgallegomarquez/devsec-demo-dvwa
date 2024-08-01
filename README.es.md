@@ -11,7 +11,7 @@ Tener en cuenta que hay **tanto vulnerabilidades documentadas como no documentad
 
 ### Descargo de responsabilidad
 
-No nos hacemos responsables de la forma en que cualquier persona utilice esta aplicación (DVWA). Hemos dejado claros los propósitos de la aplicación y no debe usarse de forma malintencionada. Hemos advertido y tomado medidas para evitar que los usuarios instalen DVWA en servidores web activos. Si su servidor web se ve comprometido por una instalación de DVWA, no es responsabilidad nuestra, sino de la persona o personas que lo subieron e instalaron.
+No nos hacemos responsables de la forma en que cualquier persona utilice esta aplicación (DVWA). Hemos dejado claros los propósitos de la aplicación y no debe usarse de forma malintencionada. Hemos advertido y tomado medidas para evitar que los usuarios instalen DVWA en servidores web activos. Si su servidor web se ve comprometido por una instalación de DVWA, no es responsabilidad nuestra, sino de la persona o personas que lo subieron e instalaron..
 
 - - -
 
